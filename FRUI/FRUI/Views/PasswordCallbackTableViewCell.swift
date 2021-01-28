@@ -14,6 +14,7 @@ import FRAuth
 class PasswordCallbackTableViewCell: UITableViewCell, FRUICallbackTableViewCell {
 
     // MARK: - Properties
+    var delegate: AuthStepProtocol?
     public static let cellIdentifier = "PasswordCallbackTableViewCellId"
     public static let cellHeight:CGFloat = 100.0
     @IBOutlet weak var passwordField:FRTextField?

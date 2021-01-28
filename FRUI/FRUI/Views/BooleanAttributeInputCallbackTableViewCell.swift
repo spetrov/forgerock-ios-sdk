@@ -20,7 +20,7 @@ class BooleanAttributeInputCallbackTableViewCell: UITableViewCell, FRUICallbackT
     
     @IBOutlet weak var descriptionLabel: UILabel?
     @IBOutlet weak var toggleSwitch: UISwitch?
-    
+    var delegate: AuthStepProtocol?
     var callback: BooleanAttributeInputCallback?
 
     override func awakeFromNib() {

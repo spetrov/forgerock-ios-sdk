@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D520D31B25C2679E004B86A8 /* IdpCallbackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D520D31925C2679E004B86A8 /* IdpCallbackTableViewCell.swift */; };
+		D520D31C25C2679E004B86A8 /* IdpCallbackTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D520D31A25C2679E004B86A8 /* IdpCallbackTableViewCell.xib */; };
 		D521A2062303644300EDD28E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D554633122A6EF950096C7A4 /* ViewController.swift */; };
 		D521A2082303644300EDD28E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D554632F22A6EF950096C7A4 /* AppDelegate.swift */; };
 		D521A20E2303644300EDD28E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D554633822A6EF960096C7A4 /* LaunchScreen.storyboard */; };
@@ -30,6 +32,8 @@
 		D5C050EC245A415E00E5A38C /* FRCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C050EB245A415E00E5A38C /* FRCore.framework */; };
 		D5C050ED245A415E00E5A38C /* FRCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D5C050EB245A415E00E5A38C /* FRCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D5C64E562489808600CB7EB3 /* NoSessionInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C64E552489808600CB7EB3 /* NoSessionInterceptor.swift */; };
+		D5C6B5F725C1229A00A86730 /* FRSocialLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C6B31A25C0E56300A86730 /* FRSocialLogin.framework */; };
+		D5C6B5F825C1229A00A86730 /* FRSocialLogin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D5C6B31A25C0E56300A86730 /* FRSocialLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D5CFCF7622FB8DCA0027B7A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D554633122A6EF950096C7A4 /* ViewController.swift */; };
 		D5E080CF23DA583D0025EA17 /* CustomNameCallbackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E080CE23DA583D0025EA17 /* CustomNameCallbackCell.swift */; };
 		D5E080D123DA5A070025EA17 /* CustomNameCallbackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5E080D023DA5A070025EA17 /* CustomNameCallbackCell.xib */; };
@@ -104,6 +108,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = D59FAE1D234413D3005D34DA;
 			remoteInfo = FRProximity;
+		};
+		D5C6B31925C0E56300A86730 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5C6B30E25C0E56200A86730 /* FRSocialLogin.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D5C6B2C125C0E4EE00A86730;
+			remoteInfo = FRSocialLogin;
+		};
+		D5C6B31B25C0E56300A86730 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5C6B30E25C0E56200A86730 /* FRSocialLogin.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D5C6B2CA25C0E4EF00A86730;
+			remoteInfo = FRSocialLoginTests;
+		};
+		D5C6B33F25C0E5F600A86730 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5C6B30E25C0E56200A86730 /* FRSocialLogin.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D5C6B2C025C0E4EE00A86730;
+			remoteInfo = FRSocialLogin;
 		};
 		D5E6F442233AC39500D18DF1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -184,6 +209,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				D5C6B5F825C1229A00A86730 /* FRSocialLogin.framework in Embed Frameworks */,
 				D59FAEAE234418EF005D34DA /* FRAuth.framework in Embed Frameworks */,
 				D5C050ED245A415E00E5A38C /* FRCore.framework in Embed Frameworks */,
 				D5554F71235A6F78009FC810 /* FRProximity.framework in Embed Frameworks */,
@@ -195,6 +221,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D520D31925C2679E004B86A8 /* IdpCallbackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdpCallbackTableViewCell.swift; sourceTree = "<group>"; };
+		D520D31A25C2679E004B86A8 /* IdpCallbackTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IdpCallbackTableViewCell.xib; sourceTree = "<group>"; };
 		D521A21A2303644300EDD28E /* FRExampleSSO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FRExampleSSO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D53326FD2480613D002FF207 /* ForceAuthInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceAuthInterceptor.swift; sourceTree = "<group>"; };
 		D554632C22A6EF950096C7A4 /* FRExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FRExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,6 +234,7 @@
 		D59FAE4C2344141A005D34DA /* FRProximity.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FRProximity.xcodeproj; path = ../../FRProximity/FRProximity.xcodeproj; sourceTree = "<group>"; };
 		D5C050EB245A415E00E5A38C /* FRCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FRCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C64E552489808600CB7EB3 /* NoSessionInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoSessionInterceptor.swift; sourceTree = "<group>"; };
+		D5C6B30E25C0E56200A86730 /* FRSocialLogin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FRSocialLogin.xcodeproj; path = ../../FRSocialLogin/FRSocialLogin.xcodeproj; sourceTree = "<group>"; };
 		D5E080CE23DA583D0025EA17 /* CustomNameCallbackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNameCallbackCell.swift; sourceTree = "<group>"; };
 		D5E080D023DA5A070025EA17 /* CustomNameCallbackCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomNameCallbackCell.xib; sourceTree = "<group>"; };
 		D5E6F433233ABF1800D18DF1 /* FRAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FRAuth.framework; path = "/Users/james.go/Documents/workspace/iOS/forgerock-ios-sdk/SampleApps/FRExample/FRExample/FRAuth.framework"; sourceTree = "<absolute>"; };
@@ -236,6 +265,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5C6B5F725C1229A00A86730 /* FRSocialLogin.framework in Frameworks */,
 				D59FAEAD234418EF005D34DA /* FRAuth.framework in Frameworks */,
 				D5C050EC245A415E00E5A38C /* FRCore.framework in Frameworks */,
 				D5554F70235A6F78009FC810 /* FRProximity.framework in Frameworks */,
@@ -258,6 +288,7 @@
 		D554632322A6EF950096C7A4 = {
 			isa = PBXGroup;
 			children = (
+				D5C6B30E25C0E56200A86730 /* FRSocialLogin.xcodeproj */,
 				D5E6F43B233AC39500D18DF1 /* FRAuth.xcodeproj */,
 				D59FAE4C2344141A005D34DA /* FRProximity.xcodeproj */,
 				D5E6F448233AC39E00D18DF1 /* FRUI.xcodeproj */,
@@ -309,6 +340,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		D5C6B30F25C0E56200A86730 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D5C6B31A25C0E56300A86730 /* FRSocialLogin.framework */,
+				D5C6B31C25C0E56300A86730 /* FRSocialLoginTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		D5E080C623DA58310025EA17 /* Customization */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +356,8 @@
 				D5E080D023DA5A070025EA17 /* CustomNameCallbackCell.xib */,
 				D53326FD2480613D002FF207 /* ForceAuthInterceptor.swift */,
 				D5C64E552489808600CB7EB3 /* NoSessionInterceptor.swift */,
+				D520D31925C2679E004B86A8 /* IdpCallbackTableViewCell.swift */,
+				D520D31A25C2679E004B86A8 /* IdpCallbackTableViewCell.xib */,
 			);
 			path = Customization;
 			sourceTree = "<group>";
@@ -397,6 +439,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D5C6B34025C0E5F600A86730 /* PBXTargetDependency */,
 				D59FAEA3234418D3005D34DA /* PBXTargetDependency */,
 				D59FAEAB234418D3005D34DA /* PBXTargetDependency */,
 				D59FAEB0234418EF005D34DA /* PBXTargetDependency */,
@@ -465,6 +508,10 @@
 					ProjectRef = D59FAE4C2344141A005D34DA /* FRProximity.xcodeproj */;
 				},
 				{
+					ProductGroup = D5C6B30F25C0E56200A86730 /* Products */;
+					ProjectRef = D5C6B30E25C0E56200A86730 /* FRSocialLogin.xcodeproj */;
+				},
+				{
 					ProductGroup = D5E6F449233AC39E00D18DF1 /* Products */;
 					ProjectRef = D5E6F448233AC39E00D18DF1 /* FRUI.xcodeproj */;
 				},
@@ -490,6 +537,20 @@
 			fileType = wrapper.cfbundle;
 			path = FRProximityTests.xctest;
 			remoteRef = D59FAE572344141A005D34DA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D5C6B31A25C0E56300A86730 /* FRSocialLogin.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FRSocialLogin.framework;
+			remoteRef = D5C6B31925C0E56300A86730 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D5C6B31C25C0E56300A86730 /* FRSocialLoginTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = FRSocialLoginTests.xctest;
+			remoteRef = D5C6B31B25C0E56300A86730 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		D5E6F443233AC39500D18DF1 /* FRAuth.framework */ = {
@@ -542,6 +603,7 @@
 				D5E080D123DA5A070025EA17 /* CustomNameCallbackCell.xib in Resources */,
 				D554633722A6EF960096C7A4 /* Assets.xcassets in Resources */,
 				D5FE5E6823190A7700E04658 /* FRAuthConfig.plist in Resources */,
+				D520D31C25C2679E004B86A8 /* IdpCallbackTableViewCell.xib in Resources */,
 				D554633522A6EF950096C7A4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -566,6 +628,7 @@
 				D5E080CF23DA583D0025EA17 /* CustomNameCallbackCell.swift in Sources */,
 				D53326FE2480613D002FF207 /* ForceAuthInterceptor.swift in Sources */,
 				D5CFCF7622FB8DCA0027B7A0 /* ViewController.swift in Sources */,
+				D520D31B25C2679E004B86A8 /* IdpCallbackTableViewCell.swift in Sources */,
 				D554633022A6EF950096C7A4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -607,6 +670,11 @@
 			isa = PBXTargetDependency;
 			name = FRProximity;
 			targetProxy = D59FAEBE23441B7E005D34DA /* PBXContainerItemProxy */;
+		};
+		D5C6B34025C0E5F600A86730 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FRSocialLogin;
+			targetProxy = D5C6B33F25C0E5F600A86730 /* PBXContainerItemProxy */;
 		};
 		D5E6F458233AC3AF00D18DF1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -817,7 +885,7 @@
 				CODE_SIGN_ENTITLEMENTS = "FRExample/Supporting Files/FRExample.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JV6EC9KSN3;
+				DEVELOPMENT_TEAM = 9QSE66762D;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FRExample",
@@ -828,7 +896,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.forgerock.ios.sdk.example;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forgerock.ios.sdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -843,7 +911,7 @@
 				CODE_SIGN_ENTITLEMENTS = "FRExample/Supporting Files/FRExample.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JV6EC9KSN3;
+				DEVELOPMENT_TEAM = 9QSE66762D;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FRExample",
@@ -854,7 +922,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.forgerock.ios.sdk.example;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forgerock.ios.sdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

@@ -20,6 +20,7 @@ class TermsAndConditionsTableViewCell: UITableViewCell, FRUICallbackTableViewCel
     @IBOutlet weak var acceptSwitch: UISwitch?
     
     var callback: TermsAndConditionsCallback?
+    var delegate: AuthStepProtocol?
     
     override func awakeFromNib() {
         super.awakeFromNib()

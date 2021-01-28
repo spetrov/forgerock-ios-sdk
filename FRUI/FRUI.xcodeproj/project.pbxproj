@@ -24,6 +24,8 @@
 		D53A922D22B1869C003DF94E /* AuthStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53A922522B1869C003DF94E /* AuthStepViewController.swift */; };
 		D577B26A22DFCEC60065BA21 /* KbaCreateCallbackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D577B26822DFCEC60065BA21 /* KbaCreateCallbackTableViewCell.swift */; };
 		D577B26B22DFCEC60065BA21 /* KbaCreateCallbackTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D577B26922DFCEC60065BA21 /* KbaCreateCallbackTableViewCell.xib */; };
+		D57A2B4425C256C7008BCD43 /* IdPProviderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57A2B4225C256C6008BCD43 /* IdPProviderCell.swift */; };
+		D57A2B4525C256C7008BCD43 /* IdPProviderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D57A2B4325C256C6008BCD43 /* IdPProviderCell.xib */; };
 		D5855BDF233EB988003333BD /* FRUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5855BDE233EB988003333BD /* FRUser.swift */; };
 		D5877790238DB6E200422605 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D587778F238DB6E200422605 /* Assets.xcassets */; };
 		D5877795238DBFCA00422605 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5877794238DBFCA00422605 /* UIApplication.swift */; };
@@ -104,6 +106,8 @@
 		D53A922522B1869C003DF94E /* AuthStepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthStepViewController.swift; sourceTree = "<group>"; };
 		D577B26822DFCEC60065BA21 /* KbaCreateCallbackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KbaCreateCallbackTableViewCell.swift; sourceTree = "<group>"; };
 		D577B26922DFCEC60065BA21 /* KbaCreateCallbackTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KbaCreateCallbackTableViewCell.xib; sourceTree = "<group>"; };
+		D57A2B4225C256C6008BCD43 /* IdPProviderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdPProviderCell.swift; sourceTree = "<group>"; };
+		D57A2B4325C256C6008BCD43 /* IdPProviderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IdPProviderCell.xib; sourceTree = "<group>"; };
 		D5855BDE233EB988003333BD /* FRUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRUser.swift; sourceTree = "<group>"; };
 		D587778F238DB6E200422605 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5877794238DBFCA00422605 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
@@ -216,6 +220,8 @@
 		D53A921C22B1869C003DF94E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D57A2B4225C256C6008BCD43 /* IdPProviderCell.swift */,
+				D57A2B4325C256C6008BCD43 /* IdPProviderCell.xib */,
 				D5CC1E0123DA3957006C7EAA /* FRUICallbackTableViewCell.swift */,
 				D53A921D22B1869C003DF94E /* PasswordCallbackTableViewCell.swift */,
 				D53A922022B1869C003DF94E /* PasswordCallbackTableViewCell.xib */,
@@ -444,6 +450,7 @@
 				D577B26B22DFCEC60065BA21 /* KbaCreateCallbackTableViewCell.xib in Resources */,
 				D592480E2328446B0027031A /* ConfirmationCallbackTableViewCell.xib in Resources */,
 				D5962DC0238F47FA0021859F /* arrow.png in Resources */,
+				D57A2B4525C256C7008BCD43 /* IdPProviderCell.xib in Resources */,
 				D592481623285AAF0027031A /* TextOutputCallbackTableViewCell.xib in Resources */,
 				D53A922C22B1869C003DF94E /* AuthStepViewController.xib in Resources */,
 				D5F8F9F424B7DC8300EC9AEB /* BooleanAttributeInputCallbackTableViewCell.xib in Resources */,
@@ -486,6 +493,7 @@
 				D5B2A38323FCABD400764370 /* DeviceAttributeTableViewCell.swift in Sources */,
 				D592480723283E830027031A /* PollingWaitCallbackTableViewCell.swift in Sources */,
 				D5B27E6A2318B77F0058EFE3 /* FRDropDownButton.swift in Sources */,
+				D57A2B4425C256C7008BCD43 /* IdPProviderCell.swift in Sources */,
 				D527D03124BCDB4E00C21663 /* FRUITextView.swift in Sources */,
 				D592480D2328446B0027031A /* ConfirmationCallbackTableViewCell.swift in Sources */,
 				D5CC1E0223DA3957006C7EAA /* FRUICallbackTableViewCell.swift in Sources */,

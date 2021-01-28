@@ -19,6 +19,7 @@ class NameCallbackTableViewCell: UITableViewCell, FRUICallbackTableViewCell {
     @IBOutlet weak var textField: FRTextField?
     
     var callback: SingleValueCallback?
+    var delegate: AuthStepProtocol?
     
     override func awakeFromNib() {
         super.awakeFromNib()

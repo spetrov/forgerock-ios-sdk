@@ -13,6 +13,7 @@ import FRAuth
 import FRUI
 import CoreLocation
 import QuartzCore
+import FRSocialLogin
 
 class ViewController: UIViewController {
 
@@ -25,6 +26,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var invokeBtn: FRButton?
     @IBOutlet weak var urlField: FRTextField?
     
+    var idpCallback: IdPCallback?
     var selectedIndex: Int = 0
     var primaryColor: UIColor
     var textColor: UIColor
@@ -169,13 +171,16 @@ class ViewController: UIViewController {
         
         //  - MARK: FRUI Customize Cell example
         // Comment out below code to demonstrate FRUI customization
-//        CallbackTableViewCellFactory.shared.registerCallbackTableViewCell(callbackType: "NameCallback", cellClass: CustomNameCallbackCell.self, nibName: "CustomNameCallbackCell")
+        CallbackTableViewCellFactory.shared.registerCallbackTableViewCell(callbackType: "IdPCallback", cellClass: IdpCallbackTableViewCell.self, nibName: "IdpCallbackTableViewCell")
         
         
         //  - MARK: RequestInterceptor example
         
         //  By commenting out below code, it registers 'ForceAuthIntercetpr' class into FRCore and FRAuth's RequestInterceptor which then allows developers to customize requests being made by ForgeRock SDK, and modify as needed
 //        FRRequestInterceptorRegistry.shared.registerInterceptors(interceptors: [ForceAuthInterceptor()])
+        
+        CallbackFactory.shared.registerCallback(callbackType: "SelectIdPCallback", callbackClass: SelectIdPCallback.self)
+        CallbackFactory.shared.registerCallback(callbackType: "IdPCallback", callbackClass: IdPCallback.self)
         
         // Start SDK
         do {
@@ -215,7 +220,68 @@ class ViewController: UIViewController {
             // TODO: Currently only supports NameCallback / PasswordCallback / ChoiceCallback; any additional callback type can be added in the future
             DispatchQueue.main.async {
                 
+                let jsonStr = """
+                {
+                    "type": "IdPCallback",
+                    "output": [
+                        {
+                            "name": "provider",
+                            "value": "apple"
+                        },
+                        {
+                            "name": "clientId",
+                            "value": "59755530431-v910eei384n8gcvt1rg59tf9l67sqdfc.apps.googleusercontent.com"
+                        },
+                        {
+                            "name": "redirectUri",
+                            "value": "https://forgerock.org/oauth2redirect"
+                        },
+                        {
+                            "name": "scopes",
+                            "value": [
+                                "profile",
+                                "openid",
+                                "email"
+                            ]
+                        },
+                        {
+                            "name": "nonce",
+                            "value": ""
+                        }
+                    ],
+                    "input": [
+                        {
+                            "name": "IDToken1token",
+                            "value": ""
+                        },
+                        {
+                            "name": "IDToken1token_type",
+                            "value": ""
+                        }
+                    ]
+                }
+                """
+                do {
+                    let socialCallback = try IdPCallback(json: self.parseStringToDictionary(jsonStr))
+                    node.callbacks = [socialCallback]
+                    self.idpCallback = socialCallback
+                }
+                catch {
+                    FRLog.e(error.localizedDescription)
+                }
+                
                 let title = "FRAuth"
+                
+                for callback: Callback in node.callbacks {
+                    if callback.type == "IdPCallback", let idpCallback = callback as? IdPCallback {
+                        
+                        idpCallback.performLogin { (token, tokenType, error) in
+                            FRLog.w("Token: \(token ?? "") || Token Type: \(tokenType ?? "") || Error: \(error?.localizedDescription ?? "")")
+                            self.displayLog("\(idpCallback.buildResponse())")
+                        }
+                    }
+                }
+                return
                 
                 let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
                 
@@ -516,16 +582,85 @@ class ViewController: UIViewController {
         }
     }
     
+    func parseStringToDictionary(_ str: String) -> [String: Any] {
+        
+        var json: [String: Any]?
+        
+        if let data = str.data(using: String.Encoding.utf8) {
+            do {
+                json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String:Any]
+            } catch {
+                return [:]
+            }
+        }
+        
+        guard let jsonDict = json else {
+            return [:]
+        }
+        
+        return jsonDict
+    }
 
     func performCentralizedLogin() {
-        FRUser.browser()?
-            .set(presentingViewController: self)
-            .set(browserType: .authSession)
-            .setCustomParam(key: "custom", value: "value")
-            .build().login { (user, error) in
-                self.displayLog("User: \(String(describing: user)) || Error: \(String(describing: error))")
+        
+        let jsonStr = """
+        {
+            "type": "IdPCallback",
+            "output": [
+                {
+                    "name": "provider",
+                    "value": "apple"
+                },
+                {
+                    "name": "clientId",
+                    "value": "422386438632-9dir4mp391gfsat8m4giq0akpei90t7b.apps.googleusercontent.com"
+                },
+                {
+                    "name": "redirectUri",
+                    "value": "https://forgerock.org/oauth2redirect"
+                },
+                {
+                    "name": "scopes",
+                    "value": [
+                        "user_birthday",
+                        "email"
+                    ]
+                },
+                {
+                    "name": "nonce",
+                    "value": ""
+                }
+            ],
+            "input": [
+                {
+                    "name": "IDToken1token",
+                    "value": ""
+                },
+                {
+                    "name": "IDToken1token_type",
+                    "value": ""
+                }
+            ]
         }
-        return
+        """
+        do {
+            self.idpCallback = try IdPCallback(json: self.parseStringToDictionary(jsonStr))
+            self.idpCallback?.performLogin(completion: { (token, tokenType, error) in
+                FRLog.w("Token: \(token ?? "") || Token Type: \(tokenType ?? "") || Error: \(error?.localizedDescription ?? "")")
+            })
+        }
+        catch {
+            FRLog.e(error.localizedDescription)
+        }
+//
+//        FRUser.browser()?
+//            .set(presentingViewController: self)
+//            .set(browserType: .authSession)
+//            .setCustomParam(key: "custom", value: "value")
+//            .build().login { (user, error) in
+//                self.displayLog("User: \(String(describing: user)) || Error: \(String(describing: error))")
+//        }
+//        return
         
     }
     

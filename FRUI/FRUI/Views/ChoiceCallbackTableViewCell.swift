@@ -19,7 +19,7 @@ class ChoiceCallbackTableViewCell: UITableViewCell, FRUICallbackTableViewCell {
     public static let cellHeight: CGFloat = 120.0
     
     var callback: ChoiceCallback?
-    
+    var delegate: AuthStepProtocol?
     
     override func awakeFromNib() {
         super.awakeFromNib()

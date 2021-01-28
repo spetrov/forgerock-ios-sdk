@@ -22,6 +22,7 @@ class KbaCreateCallbackTableViewCell: UITableViewCell, FRUICallbackTableViewCell
     @IBOutlet weak var questionField: UIButton?
     
     var callback: KbaCreateCallback?
+    var delegate: AuthStepProtocol?
     
     override func awakeFromNib() {
         super.awakeFromNib()

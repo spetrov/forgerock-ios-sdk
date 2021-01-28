@@ -124,6 +124,7 @@
 		D5723C3C23F4C65800557AA8 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5723C3923F4C65800557AA8 /* AuthService.swift */; };
 		D5723C3D23F4C65800557AA8 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5723C3A23F4C65800557AA8 /* Node.swift */; };
 		D5723C3F23F4C66A00557AA8 /* PolicyAdvice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5723C3E23F4C66A00557AA8 /* PolicyAdvice.swift */; };
+		D57A2BB825C259F7008BCD43 /* SelectIdpCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57A2BB625C259F7008BCD43 /* SelectIdpCallback.swift */; };
 		D5843B542315C56A00513932 /* ObjcFRDeviceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5843B532315C56A00513932 /* ObjcFRDeviceTests.m */; };
 		D5843B562315C64500513932 /* ObjcFRDeviceCollectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5843B552315C64500513932 /* ObjcFRDeviceCollectorTests.m */; };
 		D586CF7723358EE0007A2194 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D586CF2123358EDF007A2194 /* AuthError.swift */; };
@@ -428,6 +429,7 @@
 		D5723C3923F4C65800557AA8 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		D5723C3A23F4C65800557AA8 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		D5723C3E23F4C66A00557AA8 /* PolicyAdvice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyAdvice.swift; sourceTree = "<group>"; };
+		D57A2BB625C259F7008BCD43 /* SelectIdpCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectIdpCallback.swift; sourceTree = "<group>"; };
 		D5843B532315C56A00513932 /* ObjcFRDeviceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjcFRDeviceTests.m; sourceTree = "<group>"; };
 		D5843B552315C64500513932 /* ObjcFRDeviceCollectorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjcFRDeviceCollectorTests.m; sourceTree = "<group>"; };
 		D586CF2123358EDF007A2194 /* AuthError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
@@ -1075,6 +1077,7 @@
 		D586CF4023358EDF007A2194 /* Callbacks */ = {
 			isa = PBXGroup;
 			children = (
+				D57A2BB625C259F7008BCD43 /* SelectIdpCallback.swift */,
 				D586CF4123358EDF007A2194 /* TermsAndConditionsCallback.swift */,
 				D586CF4223358EDF007A2194 /* NameCallback.swift */,
 				D586CF4323358EDF007A2194 /* PasswordCallback.swift */,
@@ -1762,6 +1765,7 @@
 				D5B2A37E23FC951700764370 /* HiddenValueCallback.swift in Sources */,
 				D5B2A38923FCB25E00764370 /* ActionCallback.swift in Sources */,
 				D512CD41240DC41E00AF520E /* FRRestClient.swift in Sources */,
+				D57A2BB825C259F7008BCD43 /* SelectIdpCallback.swift in Sources */,
 				D586CF7823358EE0007A2194 /* ConfigError.swift in Sources */,
 				D586CF8723358EE0007A2194 /* BashDetector.swift in Sources */,
 				D586CF7F23358EE0007A2194 /* CydiaSubstrateDetector.swift in Sources */,

@@ -18,6 +18,7 @@ class TextOutputCallbackTableViewCell: UITableViewCell, FRUICallbackTableViewCel
     @IBOutlet weak var textField:FRTextField?
     @IBOutlet weak var textView: UITextView?
     var callback: TextOutputCallback?
+    var delegate: AuthStepProtocol?
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -18,6 +18,7 @@ class CustomNameCallbackCell: UITableViewCell, FRUICallbackTableViewCell {
     static var cellIdentifier: String = "CustomNameCallbackCellId"
     static var cellHeight: CGFloat = 400.0
     
+    var delegate: AuthStepProtocol?
     var callback: NameCallback?
     @IBOutlet weak var nameField:FRTextField?
     
